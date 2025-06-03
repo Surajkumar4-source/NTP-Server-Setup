@@ -8,18 +8,18 @@ This guide demonstrates how to set up **offline time synchronization** between *
 
 ---
 
-## 🧠 Why Time Synchronization Matters
+##  Why Time Synchronization Matters
 
-* 🗓️ **Accurate Logs**: Ensures logs across systems reflect the correct order of events.
-* 🔐 **Authentication & Security**: Time-sensitive protocols (e.g., Kerberos) rely on synchronized clocks.
-* 📈 **Monitoring Tools**: Metrics and dashboards need consistent timestamps.
-* 🧪 **Testing & Simulations**: Helps maintain consistency when simulating multi-node environments.
+*  **Accurate Logs**: Ensures logs across systems reflect the correct order of events.
+*  **Authentication & Security**: Time-sensitive protocols (e.g., Kerberos) rely on synchronized clocks.
+*  **Monitoring Tools**: Metrics and dashboards need consistent timestamps.
+*  **Testing & Simulations**: Helps maintain consistency when simulating multi-node environments.
 
 ---
 
-## 🛠️ Tools Used: Chrony
+##  Tools Used: Chrony
 
-### 🔹 What is Chrony?
+###  What is Chrony?
 
 Chrony is a versatile implementation of the Network Time Protocol (NTP). It is designed for:
 
@@ -31,7 +31,7 @@ Compared to the older `ntpd`, Chrony is the recommended tool for modern systems.
 
 ---
 
-## 🧭 Setup Overview
+##  Setup Overview
 
 | VM      | Role       | IP Address Example |
 | ------- | ---------- | ------------------ |
@@ -43,9 +43,9 @@ All machines are assumed to be on the **same private network** (e.g., `192.168.1
 
 ---
 
-## ✅ Configuration Steps
+##  Configuration Steps
 
-### 🔹 Step 1: Install Chrony (All VMs)
+###  Step 1: Install Chrony (All VMs)
 
 Run this on **VM1, VM2, and VM3**:
 
@@ -56,7 +56,7 @@ sudo apt install chrony -y
 
 ---
 
-### 🔹 Step 2: Configure VM1 as the NTP Server
+###  Step 2: Configure VM1 as the NTP Server
 
 1. Open the configuration file:
 
@@ -92,7 +92,7 @@ sudo apt install chrony -y
 
 ---
 
-### 🔹 Step 3: Configure VM2 and VM3 as Clients
+###  Step 3: Configure VM2 and VM3 as Clients
 
 1. Open the configuration file on each client:
 
@@ -129,7 +129,7 @@ sudo apt install chrony -y
 
 ---
 
-### 🔍 Step 4: Confirm Synchronization
+###  Step 4: Confirm Synchronization
 
 On VM2 or VM3, run:
 
@@ -153,7 +153,7 @@ You should see the IP of VM1 marked with an asterisk `*`, indicating that it is 
 
 ---
 
-## 📌 Additional Notes
+##  Additional Notes
 
 * Chrony works well even when clients are disconnected from the network for extended periods.
 * The `iburst` option allows faster initial synchronization.
@@ -162,7 +162,7 @@ You should see the IP of VM1 marked with an asterisk `*`, indicating that it is 
 
 ---
 
-## ✅ Result
+##  Result
 
 You now have a **fully offline, reliable time synchronization system** where:
 
