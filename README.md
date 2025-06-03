@@ -1,5 +1,6 @@
-# 🕒 Time Synchronization Between Virtual Machines Using Chrony 
-## 📘 Introduction
+#  Time Synchronization Between Virtual Machines Using Chrony 
+
+## Introduction
 
 Time synchronization is crucial for consistent system operations, especially in distributed systems and networked environments. When multiple virtual machines (VMs) interact—whether for logging, authentication, or monitoring—they must have a consistent and accurate system time.
 
