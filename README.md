@@ -4,7 +4,7 @@
 
 Time synchronization is crucial for consistent system operations, especially in distributed systems and networked environments. When multiple virtual machines (VMs) interact—whether for logging, authentication, or monitoring—they must have a consistent and accurate system time.
 
-This guide demonstrates how to set up **offline time synchronization** between **three virtual machines** using the **Chrony** time synchronization service. One VM will act as the **local NTP server**, and the others will act as **clients**, syncing their time from it. This setup **does not require internet access after configuration**.
+This guide demonstrates how to set up **offline time synchronization** between **virtual machines** using the **Chrony** time synchronization service. One VM will act as the **local NTP server**, and the others will act as **clients**, syncing their time from it. This setup **does not require internet access after configuration**.
 
 ---
 
